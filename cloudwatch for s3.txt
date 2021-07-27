@@ -1,0 +1,27 @@
+{
+ "Version": "2008-10-17",
+ "Id": "example-ID",
+ "Statement": [
+  {
+   "Sid": "s3-event-notifier",
+   "Effect": "Allow",
+   "Principal": {
+     "Service": "s3.amazonaws.com"
+   },
+   "Action": [
+    "SNS:Publish"
+   ],
+   "Resource": "arn:aws:sns:us-east-1:538824034419:s3cloud",
+   "Condition": {
+      "ArnLike": {          
+      "aws:SourceArn": "arn:aws:s3:*:*:fazzzil"
+    }
+   }
+  }
+ ]
+}
+ 
+
+
+
+https://www.youtube.com/watch?v=EGyuzMbXD0Y   ( for reference )
